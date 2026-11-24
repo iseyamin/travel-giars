@@ -1,4 +1,5 @@
 import React from 'react';
+import iconIng from './icon.jpg'
 
 const Navbar = () => {
     return (
@@ -41,7 +42,7 @@ const Navbar = () => {
         <div className="w-10 rounded-full">
           <img
             alt="Tailwind CSS Navbar component"
-            src="public\icon.jpg" />
+            src={iconIng} />
         </div>
       </div>
   </div>
