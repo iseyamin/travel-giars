@@ -1,0 +1,93 @@
+
+[
+  {
+    "id": 1,
+    "title": "Adventure Hiking Backpack",
+    "description": "A durable 45L backpack with padded shoulder straps, multiple compartments, and a rain cover for multi-day trips.",
+    "currentBidPrice": 85,
+    "timeLeft": "2h 35m",
+    "bidsCount": 12,
+    "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800"
+  },
+  {
+    "id": 2,
+    "title": "Lightweight Camping Tent",
+    "description": "A weather-resistant two-person tent that is easy to set up and ideal for camping and trekking.",
+    "currentBidPrice": 120,
+    "timeLeft": "5h 10m",
+    "bidsCount": 8,
+    "image": "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=800"
+  },
+  {
+    "id": 3,
+    "title": "Portable Solar Power Bank",
+    "description": "A rugged portable power bank designed to keep your devices charged during outdoor adventures.",
+    "currentBidPrice": 42,
+    "timeLeft": "1d 4h",
+    "bidsCount": 6,
+    "image": "https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?w=800"
+  },
+  {
+    "id": 4,
+    "title": "Waterproof Trekking Boots",
+    "description": "Comfortable hiking boots with ankle support and a durable outsole for rough trails.",
+    "currentBidPrice": 95,
+    "timeLeft": "3h 20m",
+    "bidsCount": 15,
+    "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800"
+  },
+  {
+    "id": 5,
+    "title": "Compact Travel Camera",
+    "description": "A lightweight digital camera for capturing high-quality travel photos and outdoor memories.",
+    "currentBidPrice": 210,
+    "timeLeft": "8h 45m",
+    "bidsCount": 19,
+    "image": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=800"
+  },
+  {
+    "id": 6,
+    "title": "Insulated Stainless Steel Bottle",
+    "description": "A reusable stainless steel water bottle that keeps drinks cold or hot during long journeys.",
+    "currentBidPrice": 24,
+    "timeLeft": "6h 5m",
+    "bidsCount": 4,
+    "image": "https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=800"
+  },
+  {
+    "id": 7,
+    "title": "Ultralight Sleeping Bag",
+    "description": "A comfortable and lightweight sleeping bag designed for camping and outdoor adventures.",
+    "currentBidPrice": 68,
+    "timeLeft": "12h 30m",
+    "bidsCount": 9,
+    "image": "https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?w=800"
+  },
+  {
+    "id": 8,
+    "title": "Travel First Aid Kit",
+    "description": "A compact first aid kit containing essential supplies for minor injuries and emergencies while traveling.",
+    "currentBidPrice": 18,
+    "timeLeft": "1d 2h",
+    "bidsCount": 3,
+    "image": "https://images.unsplash.com/photo-1603398938378-e54eab446dde?w=800"
+  },
+  {
+    "id": 9,
+    "title": "Foldable Trekking Poles",
+    "description": "Adjustable trekking poles with ergonomic grips for better balance and stability on hiking trails.",
+    "currentBidPrice": 36,
+    "timeLeft": "4h 15m",
+    "bidsCount": 7,
+    "image": "https://images.unsplash.com/photo-1551632811-561732d1e306?w=800"
+  },
+  {
+    "id": 10,
+    "title": "Waterproof Travel Duffel Bag",
+    "description": "A spacious travel duffel bag with durable fabric, reinforced handles, and plenty of storage space.",
+    "currentBidPrice": 55,
+    "timeLeft": "9h 50m",
+    "bidsCount": 11,
+    "image": "https://images.unsplash.com/photo-1547949003-9792a18a2601?w=800"
+  }
+]
