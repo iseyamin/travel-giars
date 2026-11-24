@@ -37,14 +37,14 @@ function App() {
         <h2>Active Auctions</h2>
        <p>Discover and bid on extraordinary items</p>
       </div>
-      <div className='flex '>
-      <div className="left-sec w-[70%] pl-10  pr-5">
+      <div className='flex md:flex-row flex-col-reverse gap-5 md:gap-0 pb-10'>
+      <div className="left-sec md:w-[70%] md:pl-10  pr-5 pl-5">
        
        <Suspense fallback="Gears are loading">
         <Items itemPromise={itemPromise} handleHeart={handleHeart}></Items>
        </Suspense>
       </div>
-      <div className="right-sec w-[30%] pr-10 ">
+      <div className="right-sec md:w-[30%] md:pr-10 pl-5 pr-5">
         <Favorite selected={selected} count={count} handlex={handlex}></Favorite>
       </div>
     </div>
