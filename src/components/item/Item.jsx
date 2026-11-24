@@ -1,13 +1,10 @@
 import React from 'react';
+import { CiHeart } from "react-icons/ci";
 
 const Item = () => {
     return (
         <tr>
-        <th>
-          <label>
-            <input type="checkbox" className="checkbox" />
-          </label>
-        </th>
+        
         <td>
           <div className="flex items-center gap-3">
             <div className="avatar">
@@ -30,7 +27,9 @@ const Item = () => {
         </td>
         <td>Purple</td>
         <th>
-          <button className="btn btn-ghost btn-xs">details</button>
+          <button className="btn btn-ghost btn-xs">
+            <CiHeart size={25} />
+          </button>
         </th>
       </tr>
     );
