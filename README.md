@@ -96,6 +96,8 @@ npm run build
 
 ---
 
+---
+
 ## 🧠 How It Works
 
 1. 📥 Item data is fetched **once** from `gears.json` and shared with the table.
@@ -104,6 +106,19 @@ npm run build
 4. 💾 The item's `id` is saved in `localStorage` under the key `bid`.
 5. 🔄 On page load, saved ids are read back and matched with the item data to restore favorites and the total.
 6. ❌ Clicking **X** in the favorites panel removes the item, subtracts its price and deletes its id from `localStorage`.
+
+### 💡 Key Concept: Single Source of Truth
+
+The `selected` state in `App` is the only place that tracks favorites. Each row's heart button is **derived** from it:
+
+```jsx
+isSelected={selected.some(s => s.id === data.id)}
+```
+
+- ✅ Item in favorites → heart is pink and the button is disabled
+- 🔓 Item removed → `selected` changes, React re-renders, and the heart is enabled again
+
+There's no separate "disabled" state per row, so the UI can't get out of sync.
 
 ---
 
