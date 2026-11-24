@@ -7,10 +7,10 @@ import Footer from './components/footer/Footer'
 import Items from './components/items/Items'
 import Favorite from './components/favorite/Favorite'
 
-
+const itemPromise= fetch('./gears.json').then(res=>res.json());
 
 function App() {
-  const itemPromise= fetch('./gears.json').then(res=>res.json());
+  
   const[selected, setSelected]=useState([]);
   const[count, setCount]=useState(0);
 
