@@ -1,15 +1,35 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
+import { Suspense, use, useState } from 'react'
+
 import './App.css'
+import Navbar from './components/navbar/Navbar'
+import Hero from './components/hero/Hero'
+import Footer from './components/footer/Footer'
+import Items from './components/items/Items'
+
+
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const itemPromise= fetch('./gears.json').then(res=>res.json());
+    
   return (
     <>
-      <h1 className='text-3xl text-green-700'>hello</h1>
+    <Navbar></Navbar>
+    <Hero></Hero>
+
+    <div className='flex'>
+      <div className="left-sec w-[70%] pl-10 pt-10">
+       <h2>Active Auctions</h2>
+       <p>Discover and bid on extraordinary items</p>
+       <Suspense fallback="Gears are loading">
+        <Items itemPromise={itemPromise}></Items>
+       </Suspense>
+      </div>
+      <div className="right-sec w-[30%]">
+        <p>hhgfjhdfj</p>
+      </div>
+    </div>
+
+    <Footer></Footer>
     </>
   )
 }
