@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaHeart } from "react-icons/fa";
 
 const Item = ({data,handleHeart}) => {
     const{image, title, currentBidPrice, timeLeft, id}=data;
+const [isDisabled, setIsDisabled] = useState(false);
+
+const handleClick = () => {
+  handleHeart(data);
+  setIsDisabled(true);
+};
     return (
         <tr>
         
@@ -26,8 +32,13 @@ const Item = ({data,handleHeart}) => {
         </td>
         <td>{timeLeft}</td>
         <th>
-          <button className="cursor-pointer" onClick={()=>handleHeart(data)}>
-            <FaHeart size={25} className='hover:text-pink-800' />
+          <button 
+          className="cursor-pointer disabled:cursor-not-allowed"
+  onClick={handleClick}
+  disabled={isDisabled}>
+            
+                <FaHeart size={25} className={isDisabled ? 'text-pink-800' : ''} />
+            
           </button>
         </th>
       </tr>
