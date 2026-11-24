@@ -5,6 +5,7 @@ import Navbar from './components/navbar/Navbar'
 import Hero from './components/hero/Hero'
 import Footer from './components/footer/Footer'
 import Items from './components/items/Items'
+import Favorite from './components/favorite/Favorite'
 
 
 
@@ -16,8 +17,8 @@ function App() {
     <Navbar></Navbar>
     <Hero></Hero>
 
-    <div className='flex'>
-      <div className="left-sec w-[70%] pl-10 pt-10">
+    <div className='flex bg-gray-200'>
+      <div className="left-sec w-[70%] pl-10 pt-10 pr-5">
        <h2>Active Auctions</h2>
        <p>Discover and bid on extraordinary items</p>
        <Suspense fallback="Gears are loading">
@@ -25,7 +26,7 @@ function App() {
        </Suspense>
       </div>
       <div className="right-sec w-[30%]">
-        <p>hhgfjhdfj</p>
+        <Favorite></Favorite>
       </div>
     </div>
 

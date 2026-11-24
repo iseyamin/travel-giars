@@ -1,5 +1,5 @@
 import React from 'react';
-import { CiHeart } from "react-icons/ci";
+import { FaHeart } from "react-icons/fa";
 
 const Item = ({data}) => {
     const{image, title, currentBidPrice, timeLeft, id}=data;
@@ -26,8 +26,8 @@ const Item = ({data}) => {
         </td>
         <td>{timeLeft}</td>
         <th>
-          <button className="btn btn-ghost btn-xs">
-            <CiHeart size={25} />
+          <button className="cursor-pointer" >
+            <FaHeart size={25} className='hover:text-pink-800' />
           </button>
         </th>
       </tr>

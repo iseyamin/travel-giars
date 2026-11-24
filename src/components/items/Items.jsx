@@ -6,7 +6,7 @@ const Items = ({itemPromise}) => {
     console.log(itemss)
     return (
         <div>
-            <div className="overflow-x-auto">
+            <div className="overflow-x-auto bg-white rounded-2xl">
   <table className="table">
     {/* head */}
     <thead>
