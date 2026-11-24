@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { CiHeart } from "react-icons/ci";
 import Fitem from '../fitem/Fitem';
+import Noitem from '../noitem/Noitem';
 
-const Favorite = () => {
+const Favorite = ({selected,count}) => {
+    
+
     return (
         <div>
             <div className="overflow-x-auto bg-white rounded-2xl">
@@ -22,7 +25,11 @@ const Favorite = () => {
     </thead>
     <tbody>
       {
-        <Fitem></Fitem>
+        selected.length===0? (
+            <Noitem></Noitem> ) : (
+                selected.map(item=><Fitem key={item.id} item={item}></Fitem>)
+            )
+        //<Fitem></Fitem>
       }
      
     </tbody>
@@ -33,7 +40,7 @@ const Favorite = () => {
         <th>
             <div className='flex justify-around'>
                 <h2>Total bids Amount</h2>
-                <h2>$500</h2>
+                <h2>${count}</h2>
             </div>
         </th>
         

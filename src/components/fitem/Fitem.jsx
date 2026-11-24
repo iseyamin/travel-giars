@@ -1,6 +1,7 @@
 import React from 'react';
 
-const Fitem = () => {
+const Fitem = ({item}) => {
+    const{image, title, currentBidPrice, timeLeft, id}=item;
     return (
         <tr>
         
@@ -10,11 +11,11 @@ const Fitem = () => {
             <div className="avatar">
               <div className="mask mask-squircle h-12 w-12">
                 <img
-                  src="https://img.daisyui.com/images/profile/demo/2@94.webp"
+                  src={image}
                   alt="Avatar Tailwind CSS Component" />
               </div>
             </div>
-              <div className="font-bold">Hart Hagerty</div>       
+              <div className="font-bold">{title}</div>       
           </div>
           <div>
             <button>X</button>

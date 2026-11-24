@@ -12,12 +12,15 @@ import Favorite from './components/favorite/Favorite'
 function App() {
   const itemPromise= fetch('./gears.json').then(res=>res.json());
   const[selected, setSelected]=useState([]);
+  const[count, setCount]=useState(0);
 
   const handleHeart=(data)=>{
   //  console.log(data.title)
    setSelected([...selected,data])
+   setCount(count+data.currentBidPrice);
   }
-  console.log(selected)
+  //console.log(selected)
+  //console.log(count)
     
   return (
     <>
@@ -37,7 +40,7 @@ function App() {
        </Suspense>
       </div>
       <div className="right-sec w-[30%] pr-10 ">
-        <Favorite></Favorite>
+        <Favorite selected={selected} count={count}></Favorite>
       </div>
     </div>
     </div>
