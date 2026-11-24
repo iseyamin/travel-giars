@@ -34,8 +34,8 @@ function App() {
 
     <div className='bg-gray-200'>
       <div className='pl-12 pt-10 pb-1'>
-        <h2>Active Auctions</h2>
-       <p>Discover and bid on extraordinary items</p>
+        <h2 className='text-3xl text-blue-950 font-medium'>Active Auctions</h2>
+       <p className='text-black'>Discover and bid on extraordinary items</p>
       </div>
       <div className='flex md:flex-row flex-col-reverse gap-5 md:gap-0 pb-10'>
       <div className="left-sec md:w-[70%] md:pl-10  pr-5 pl-5">

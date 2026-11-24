@@ -30,7 +30,7 @@ const handleClick = () => {
         <td>
           ${currentBidPrice}
         </td>
-        <td>{timeLeft}</td>
+        <td className='hidden md:block'>{timeLeft}</td>
         <th>
           <button 
           className="cursor-pointer disabled:cursor-not-allowed"

@@ -8,10 +8,10 @@ const Favorite = ({selected,count, handlex}) => {
 
     return (
         <div>
-            <div className="overflow-x-auto bg-white rounded-2xl">
+            <div className="overflow-x-auto bg-white rounded-2xl text-black">
   <table className="table">
     {/* head */}
-    <thead>
+    <thead className='text-black'>
       <tr>
        
         <th>
@@ -34,7 +34,7 @@ const Favorite = ({selected,count, handlex}) => {
      
     </tbody>
     {/* foot */}
-    <tfoot>
+    <tfoot className='text-black'>
       <tr>
         
         <th>

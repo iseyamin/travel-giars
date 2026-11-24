@@ -6,15 +6,15 @@ const Items = ({itemPromise,handleHeart}) => {
     console.log(itemss)
     return (
         <div>
-            <div className="overflow-x-auto bg-white rounded-2xl">
+            <div className="overflow-x-auto bg-white rounded-2xl text-black">
   <table className="table">
     {/* head */}
-    <thead>
+    <thead className='text-black'>
       <tr>
         
         <th>Items</th>
         <th>Current Bid</th>
-        <th>Time Left</th>
+        <th className='hidden md:block'>Time Left</th>
         <th>Bid Now</th>
       </tr>
     </thead>
