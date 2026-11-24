@@ -59,7 +59,7 @@ function App() {
       <div className="left-sec md:w-[70%] md:pl-10  pr-5 pl-5">
        
        <Suspense fallback="Gears are loading">
-        <Items itemPromise={itemPromise} handleHeart={handleHeart}></Items>
+        <Items itemPromise={itemPromise} handleHeart={handleHeart} selected={selected}></Items>
        </Suspense>
       </div>
       <div className="right-sec md:w-[30%] md:pr-10 pl-5 pr-5">

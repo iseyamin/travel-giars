@@ -1,7 +1,7 @@
 import React, { use } from 'react';
 import Item from '../item/Item';
 
-const Items = ({itemPromise,handleHeart}) => {
+const Items = ({itemPromise,handleHeart, selected}) => {
     const itemss= use(itemPromise);
     console.log(itemss)
     return (
@@ -20,7 +20,8 @@ const Items = ({itemPromise,handleHeart}) => {
     </thead>
     <tbody>
         {
-            itemss.map((data)=><Item key={data.id} data={data} handleHeart={handleHeart}></Item>)
+            itemss.map((data)=><Item key={data.id} data={data} handleHeart={handleHeart} 
+            isSelected={selected.some(s => s.id === data.id)}></Item>)
         }
       
      
