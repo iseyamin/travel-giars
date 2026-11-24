@@ -19,6 +19,11 @@ function App() {
    setSelected([...selected,data])
    setCount(count+data.currentBidPrice);
   }
+  const handlex=(item)=>{
+   const selectedFilter= selected.filter(i=>i.id!==item.id);
+   setSelected(selectedFilter);
+   setCount(count-item.currentBidPrice);
+  }
   //console.log(selected)
   //console.log(count)
     
@@ -40,7 +45,7 @@ function App() {
        </Suspense>
       </div>
       <div className="right-sec w-[30%] pr-10 ">
-        <Favorite selected={selected} count={count}></Favorite>
+        <Favorite selected={selected} count={count} handlex={handlex}></Favorite>
       </div>
     </div>
     </div>

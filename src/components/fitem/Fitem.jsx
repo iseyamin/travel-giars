@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Fitem = ({item}) => {
+const Fitem = ({item, handlex}) => {
     const{image, title, currentBidPrice, timeLeft, id}=item;
     return (
         <tr>
@@ -18,7 +18,7 @@ const Fitem = ({item}) => {
               <div className="font-bold">{title}</div>       
           </div>
           <div>
-            <button>X</button>
+            <button onClick={()=>handlex(item)} className='cursor-pointer'>X</button>
           </div>
           </div>
 

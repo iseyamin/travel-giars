@@ -3,7 +3,7 @@ import { CiHeart } from "react-icons/ci";
 import Fitem from '../fitem/Fitem';
 import Noitem from '../noitem/Noitem';
 
-const Favorite = ({selected,count}) => {
+const Favorite = ({selected,count, handlex}) => {
     
 
     return (
@@ -27,7 +27,7 @@ const Favorite = ({selected,count}) => {
       {
         selected.length===0? (
             <Noitem></Noitem> ) : (
-                selected.map(item=><Fitem key={item.id} item={item}></Fitem>)
+                selected.map(item=><Fitem key={item.id} item={item} handlex={handlex}></Fitem>)
             )
         //<Fitem></Fitem>
       }
