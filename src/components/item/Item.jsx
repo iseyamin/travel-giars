@@ -1,7 +1,8 @@
 import React from 'react';
 import { CiHeart } from "react-icons/ci";
 
-const Item = () => {
+const Item = ({data}) => {
+    const{image, title, currentBidPrice, timeLeft, id}=data;
     return (
         <tr>
         
@@ -10,22 +11,20 @@ const Item = () => {
             <div className="avatar">
               <div className="mask mask-squircle h-12 w-12">
                 <img
-                  src="https://img.daisyui.com/images/profile/demo/2@94.webp"
+                  src={image}
                   alt="Avatar Tailwind CSS Component" />
               </div>
             </div>
             <div>
-              <div className="font-bold">Hart Hagerty</div>
-              <div className="text-sm opacity-50">United States</div>
+              <div className="font-bold">{title}</div>
+              {/* <div className="text-sm opacity-50">United States</div> */}
             </div>
           </div>
         </td>
         <td>
-          Zemlak, Daniel and Leannon
-          <br />
-          <span className="badge badge-ghost badge-sm">Desktop Support Technician</span>
+          ${currentBidPrice}
         </td>
-        <td>Purple</td>
+        <td>{timeLeft}</td>
         <th>
           <button className="btn btn-ghost btn-xs">
             <CiHeart size={25} />
