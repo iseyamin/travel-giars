@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaHeart } from "react-icons/fa";
 
-const Item = ({data}) => {
+const Item = ({data,handleHeart}) => {
     const{image, title, currentBidPrice, timeLeft, id}=data;
     return (
         <tr>
@@ -26,7 +26,7 @@ const Item = ({data}) => {
         </td>
         <td>{timeLeft}</td>
         <th>
-          <button className="cursor-pointer" >
+          <button className="cursor-pointer" onClick={()=>handleHeart(data)}>
             <FaHeart size={25} className='hover:text-pink-800' />
           </button>
         </th>

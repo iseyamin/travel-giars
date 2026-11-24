@@ -1,7 +1,7 @@
 import React, { use } from 'react';
 import Item from '../item/Item';
 
-const Items = ({itemPromise}) => {
+const Items = ({itemPromise,handleHeart}) => {
     const itemss= use(itemPromise);
     console.log(itemss)
     return (
@@ -20,7 +20,7 @@ const Items = ({itemPromise}) => {
     </thead>
     <tbody>
         {
-            itemss.map((data)=><Item key={data.id} data={data}></Item>)
+            itemss.map((data)=><Item key={data.id} data={data} handleHeart={handleHeart}></Item>)
         }
       
      

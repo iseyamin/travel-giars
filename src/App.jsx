@@ -11,6 +11,13 @@ import Favorite from './components/favorite/Favorite'
 
 function App() {
   const itemPromise= fetch('./gears.json').then(res=>res.json());
+  const[selected, setSelected]=useState([]);
+
+  const handleHeart=(data)=>{
+  //  console.log(data.title)
+   setSelected([...selected,data])
+  }
+  console.log(selected)
     
   return (
     <>
@@ -26,7 +33,7 @@ function App() {
       <div className="left-sec w-[70%] pl-10  pr-5">
        
        <Suspense fallback="Gears are loading">
-        <Items itemPromise={itemPromise}></Items>
+        <Items itemPromise={itemPromise} handleHeart={handleHeart}></Items>
        </Suspense>
       </div>
       <div className="right-sec w-[30%] pr-10 ">
