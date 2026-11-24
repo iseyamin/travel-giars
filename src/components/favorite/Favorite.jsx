@@ -5,7 +5,7 @@ import Fitem from '../fitem/Fitem';
 const Favorite = () => {
     return (
         <div>
-            <div className="overflow-x-auto">
+            <div className="overflow-x-auto bg-white rounded-2xl">
   <table className="table">
     {/* head */}
     <thead>
@@ -13,7 +13,7 @@ const Favorite = () => {
        
         <th>
             <div className='flex items-center justify-center'>
-                <CiHeart />
+                <CiHeart size={25} />
                 Favorite items
             </div>
         </th>

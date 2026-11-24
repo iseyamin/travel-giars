@@ -17,17 +17,22 @@ function App() {
     <Navbar></Navbar>
     <Hero></Hero>
 
-    <div className='flex bg-gray-200'>
-      <div className="left-sec w-[70%] pl-10 pt-10 pr-5">
-       <h2>Active Auctions</h2>
+    <div className='bg-gray-200'>
+      <div className='pl-12 pt-10 pb-1'>
+        <h2>Active Auctions</h2>
        <p>Discover and bid on extraordinary items</p>
+      </div>
+      <div className='flex '>
+      <div className="left-sec w-[70%] pl-10  pr-5">
+       
        <Suspense fallback="Gears are loading">
         <Items itemPromise={itemPromise}></Items>
        </Suspense>
       </div>
-      <div className="right-sec w-[30%]">
+      <div className="right-sec w-[30%] pr-10 ">
         <Favorite></Favorite>
       </div>
+    </div>
     </div>
 
     <Footer></Footer>
