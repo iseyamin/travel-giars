@@ -1,4 +1,4 @@
-import { Suspense, use, useState } from 'react'
+import { Suspense, use, useEffect, useState } from 'react'
 
 import './App.css'
 import Navbar from './components/navbar/Navbar'
@@ -6,23 +6,41 @@ import Hero from './components/hero/Hero'
 import Footer from './components/footer/Footer'
 import Items from './components/items/Items'
 import Favorite from './components/favorite/Favorite'
+import { add, get, remove } from './utility/utility'
 
 const itemPromise= fetch('./gears.json').then(res=>res.json());
 
 function App() {
+  //for local storage
+  const elements= use(itemPromise);
   
   const[selected, setSelected]=useState([]);
   const[count, setCount]=useState(0);
+
+  useEffect(()=>{
+    const datas=get();
+    const item=[];
+    let price=0;
+    for(const i of datas){
+      const match=elements.find(e=>e.id===i);
+      item.push(match);
+      price=price+match.currentBidPrice;
+    }
+    setSelected(item)
+    setCount(price)
+  },[elements])
 
   const handleHeart=(data)=>{
   //  console.log(data.title)
    setSelected([...selected,data])
    setCount(count+data.currentBidPrice);
+   add(data.id);
   }
   const handlex=(item)=>{
    const selectedFilter= selected.filter(i=>i.id!==item.id);
    setSelected(selectedFilter);
    setCount(count-item.currentBidPrice);
+   remove(item.id)
   }
   //console.log(selected)
   //console.log(count)
